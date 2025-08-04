@@ -1,0 +1,38 @@
+@import "tailwindcss";
+.glitch-img {
+  position: relative;
+  z-index: 10;
+}
+
+.group-hover\:glitch:hover {
+  animation: glitch 0.5s infinite;
+}
+
+.glitch-text {
+  animation: glitch 0.5s infinite;
+}
+@keyframes glitch-red {
+  0% { transform: translate(0, 0); opacity: 0.3; }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-1px, -1px); }
+  60% { transform: translate(-3px, 1px); }
+  80% { transform: translate(1px, -2px); }
+  100% { transform: translate(0, 0); opacity: 0.3; }
+}
+
+@keyframes glitch-blue {
+  0% { transform: translate(0, 0); opacity: 0.3; }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(1px, 1px); }
+  60% { transform: translate(3px, -1px); }
+  80% { transform: translate(-1px, 2px); }
+  100% { transform: translate(0, 0); opacity: 0.3; }
+}
+
+.animate-glitch-red {
+  animation: glitch-red 0.8s infinite;
+}
+
+.animate-glitch-blue {
+  animation: glitch-blue 0.8s infinite;
+}
