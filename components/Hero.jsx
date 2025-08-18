@@ -1,8 +1,11 @@
 import React from 'react';
 import Blob from './Blob'; // ✅ Your glitchy hacker image blob
-
-const Hero = () => {
+import Header from '../src/sections/header';
+import { Link } from 'react-router-dom';
+export default function Hero(){
   return (
+  <div className="h-auto mx-w-[80%]">
+    <Header/>
     <div className="relative min-h-screen w-full bg-[#0B1120] overflow-hidden flex items-center px-6 md:px-20 py-20">
       
       {/* Background Gradient Blob */}
@@ -15,15 +18,15 @@ const Hero = () => {
       <div className="relative z-20 max-w-2xl text-white">
         {/* Badge */}
         <div className="mb-6 w-fit px-4 py-1 rounded-full text-sm font-medium border border-purple-500 text-purple-300 shadow-[0_0_15px_#a855f7]/80 backdrop-blur-md bg-purple-900/20">
-          🚀 <span className="text-purple-300">Revolutionizing Educational Trust</span>
+           <span className="text-purple-300">🚀 Revolutionizing Educational Trust</span>
         </div>
 
         {/* Heading */}
         <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
           <span className="bg-gradient-to-r from-blue-400 via-red-400 to-pink-500 bg-clip-text text-transparent">
-            Trustless
-          </span>{' '}
-          Certificate & <br />
+            Trustless   
+          </span> {' '}
+          Certificate & <br/>
           Complaint Verification
         </h1>
 
@@ -53,13 +56,15 @@ const Hero = () => {
           <button className="bg-purple-600 hover:bg-purple-700 transition-colors px-6 py-3 rounded-xl font-semibold text-white shadow-md">
             Start Verification →
           </button>
-          <button className="bg-black hover:bg-gray-800 transition-colors px-6 py-3 rounded-xl font-semibold text-white shadow-md flex items-center gap-2">
-            <span className="text-blue-400">▶</span> Watch Demo
-          </button>
+         <button className="bg-black hover:bg-gray-800 transition-colors px-6 py-3 rounded-xl font-semibold text-white shadow-md flex items-center gap-2">
+       <Link to="/src/assets/Sample_Video.mp4" className="text-blue-400">▶ Watch Demo</Link>
+  
+         </button>
         </div>
       </div>
     </div>
+     </div>
   );
 };
 
-export default Hero;
+ 
